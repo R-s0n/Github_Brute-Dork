@@ -2,9 +2,9 @@
 
 This tool is a quick and easy Python script designed to identify Github search terms that can yield
 potentially valuable results for security researchers and bug bounty hunters.  Using the Github api,
-this script will perform search repos associated with a target organization and return a list of the
-searches sorted by the number of results.  This will allow researchers to identify potential code
-stored in Github that may contain sensitive information.  -rs0n
+this script will perform a search for repos associated with a target organization and return a list 
+of the searches sorted by the number of results.  This will allow researchers to identify potential 
+code stored in Github that may contain sensitive information.  -rs0n
 
 *******************************************************************
 *I AM NOT RESPONSABLE FOR HOW YOU USE THIS TOOL.  DON'T BE A DICK!*
