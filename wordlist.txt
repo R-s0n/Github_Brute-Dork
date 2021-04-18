@@ -197,7 +197,6 @@ _8382f1c42598_iv=
 -p=
 -u=
 (\"client_secret\":\"[a-zA-Z0-9-_]{24}\")
-(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})
 \?access_token=
 \?AccessKeyId=
 \?account=
@@ -1101,6 +1100,7 @@ jdbc_databaseurl=
 jdbc_host=
 jdbc_user=
 JDBC:MYSQL=
+JDBC
 JWT_ASYNC_SECERT_KEY
 JWT_CLIENT_SECRET_KEY
 JWT_COMMAND_CENTER_SECERT_KEY
