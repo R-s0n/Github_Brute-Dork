@@ -19,7 +19,7 @@ stored in Github that may contain sensitive information.  -rs0n
 *              I AM NOT RESPONSABLE FOR HOW YOU USE THIS TOOL.  DON'T BE A DICK!                     *
 ******************************************************************************************************
 
-python3 github_brutedork.py [-h --help] [-o --org] [-u --user] [-t --token] [-v --verbose] [-d --deep]
+        python3 github_brutedork.py -u [USER] -t [TOKEN] -U [TARGET_USER] -o [TARGET_ORG] -v -d
 
 ------------------------------------------------------------------------------------------------------
 |  Short  |    Long    |  Required  |                               Notes                             |
