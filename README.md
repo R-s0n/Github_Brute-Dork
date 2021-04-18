@@ -13,15 +13,16 @@ code stored in Github that may contain sensitive information.  -rs0n
 This tool requires Python Requests.  If you don't have the requests module installed, run this command:
 `pip3 install requests`
 
-python3 github_brutedork.py [-h --help] [-o --org] [-u --user] [-t --token] [-v --verbose] [-d --deep]
+       python3 github_brutedork.py -u [USER] -t [TOKEN] -U [TARGET_USER] -o [TARGET_ORG] -v -d
 
 ------------------------------------------------------------------------------------------------------
 |  Short  |    Long    |  Required  |                               Notes                             |
 |---------|------------|------------|-----------------------------------------------------------------|
 |   -h    |  --help    |     no     |                   Display this help message                     |
-|   -o    |  --org     |     yes    |                Name of the target organization                  |
+|   -o    |  --org     |     no     |                Name of the target organization                  |
 |   -u    |  --user    |     yes    |                      Add Github Username                        |
 |   -t    |  --token   |     yes    |                Add Github Personal Access Token                 |
+|   -U    |  --guser   |     no     |                Search in specific user's repos                  |
 |   -v    |  --verbose |     no     |                    Display verbose messages                     |
 |   -d    |  --deep    |     no     |             Performs all searches from wordlist (1760)          |
 -------------------------------------------------------------------------------------------------------
