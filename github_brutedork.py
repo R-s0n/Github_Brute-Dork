@@ -1,6 +1,6 @@
 # Add search for user
 
-import sys, getopt, time, json, requests, base64, time, math
+import subprocess, sys, getopt, time, json, requests, base64, time, math
 from datetime import datetime
 
 full_cmd_arguments = sys.argv
@@ -83,7 +83,10 @@ pta_bytes = plain_text_authtoken.encode("ascii")
 base64_bytes = base64.b64encode(pta_bytes)
 base64_string = base64_bytes.decode("ascii")
 
-wordlist = open("wordlist.txt", "r").read().split()
+get_home_dir = subprocess.run(["echo $HOME"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, shell=True)
+home_dir = get_home_dir.stdout.replace("\n", "")
+
+wordlist = open(f"{home_dir}/Tools/Github_Brute-Dork/wordlist.txt", "r").read().split()
 headers = {"Authorization":f"Basic {base64_string}","User-Agent":f"{user}"}
 
 search_params = ""
@@ -98,9 +101,9 @@ print("\n[-] Starting Search...")
 start = time.time()
 
 for payload in wordlist:
-    r = requests.get(f'https://api.github.com/search/code?q={search_params}"{payload}"', headers=headers)
     if verbose is True:
         print(f'[-] Scanning URL: https://api.github.com/search/code?q={search_params}"{payload}"')
+    r = requests.get(f'https://api.github.com/search/code?q={search_params}"{payload}"', headers=headers)
 
     content = json.loads(r.text)
     try:
